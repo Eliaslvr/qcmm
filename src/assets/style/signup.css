@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #daeeff;;
+}
+
+.bloc {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+form {
+    width: 18%;
+    padding: 44px;
+    background: white;
+    border-radius: 7%;
+}
+
+
+.title {
+    width: 98%;
+    text-align: center;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 98%;
+    display: flex;;
+}
+
+button {
+    display: flex;
+    margin: 0 auto;
+}
