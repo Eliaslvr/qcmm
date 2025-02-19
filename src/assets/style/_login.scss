@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #daeeff;;
+}
+
+.bloc_login {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 100px;
+}
+
+.form_login {
+    width: 18%;
+    padding: 44px;
+    background: white;
+    border-radius: 7%;
+}
+
+
+.title {
+    width: 98%;
+    text-align: center;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 98%;
+    display: flex;
+    background-color: #f3fcda;
+}
+
+button {
+    display: flex;
+    margin: 0 auto;
+}

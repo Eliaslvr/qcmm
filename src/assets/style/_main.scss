@@ -1,0 +1,40 @@
+.name_main {
+    display: flex;
+    justify-content: center;
+}
+
+.form_main {
+    background: white;
+    padding: 20px;
+    border-radius: 25px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 16px;
+}
+
+.question p {
+    margin: 0 0 28px;
+}
+
+.form_main div {
+    margin: 0;
+}
+
+.label_main {
+    display: flex;
+    text-align: center;
+}
+
+.response {
+    display: flex;
+    width: 95%;
+}
+
+.label_main input {
+    width: 15px;
+}

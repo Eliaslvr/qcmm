@@ -8,10 +8,10 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    height: 100vh;
+    margin-top: 100px;
 }
 
-form {
+.form_signup {
     width: 18%;
     padding: 44px;
     background: white;
@@ -24,16 +24,25 @@ form {
     text-align: center;
 }
 
-form div {
+.form_signup div {
     margin-bottom: 20px;
 }
 
 input {
     width: 98%;
-    display: flex;;
+    display: flex;
+    background-color: #f3fcda;
 }
 
 button {
     display: flex;
     margin: 0 auto;
+}
+
+.button_login {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin-top: 15px;
 }
