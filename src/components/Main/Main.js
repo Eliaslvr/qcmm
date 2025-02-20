@@ -1,30 +1,65 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 
 function Main() {
 
     const [selected, setSelected] = useState(""); 
     const [result, setResult] = useState(null);
+    const [username, setUsername] = useState(""); 
+    const [newUsername, setNewUsername] = useState(""); 
 
     const correctAnswer = "a";
 
+    useEffect(() => {
+        fetch(`https://ch0rxlq1-3001.uks1.devtunnels.ms/api/users`) 
+            .then(response => response.json())
+            .then(data => {
+                setUsername(data.users.username);
+                console.log(data.users.username);
+                
+                // setNewUsername(data.users.username);
+            })
+                
+            .catch(error => console.error("Erreur lors du fetch:", error));
+    }, []);
+
+    // const updateUsername = () => {
+    //     fetch(`https://ch0rxlq1-3001.uks1.devtunnels.ms/api/users/1`, { 
+    //         method: "PUT",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({ username: newUsername }) 
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log("Username mis à jour:", data);
+    //         setUsername(newUsername);
+    //     })
+    //     .catch(error => console.error("Erreur lors de la mise à jour:", error));
+    // };
+
+    // const handleUsernameChange = (e) => {
+    //     setNewUsername(e.target.value);
+    // };
+
     const handleClick = (value) => {
         setSelected(value);
-    }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (selected === correctAnswer) {
-            setResult('Bonne réponse')
-        } else {
-            setResult('Mauvaise réponse')
-        }
-    }
+        setResult(selected === correctAnswer ? "Bonne réponse" : "Mauvaise réponse");
+    };
 
     return (
         <div>
             <Navbar/>
-            <h1 className='name_main'>Bonjour ....</h1>
+            <h1 className='name_main'>Bonjour {username}</h1>
+            {/* <div>
+                <input type="text" value={newUsername} onChange={handleUsernameChange}/>
+                <button onClick={updateUsername}>Modifier le Username</button>
+            </div> */}
             <h2>QCM</h2>
             <form className='form_main' onSubmit={handleSubmit}>
                 <div className='question'>
