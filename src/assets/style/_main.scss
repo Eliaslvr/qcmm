@@ -38,3 +38,29 @@ h2 {
 .label_main input {
     width: 15px;
 }
+
+.input_change {
+    width: 150px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.button_change {
+    cursor: pointer;
+    width: 106px;
+    font-size: 12px;
+    padding: 7px 11px;
+    border-radius: 11px;
+    background-color: #588fcb;
+    color: white;
+    margin: 10px auto 40px;
+    box-shadow: 3px 2px 10px 0px rgba(0,0,0,0.75);
+    transition: all 0.3s ease-in-out;
+}
+
+.button_change:hover {
+    background-color: #4169a3; /* Couleur plus foncée */
+    transform: scale(1.08); /* Légèrement plus grand */
+    box-shadow: 5px 4px 15px 0px rgba(0,0,0,0.85);
+}
