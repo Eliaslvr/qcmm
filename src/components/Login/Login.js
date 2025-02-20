@@ -34,12 +34,12 @@ function Login() {
             // Vérification des identifiants
             if (data.users.email === email && data.users.password === password) {
                 console.log("Connexion réussie !");
-                navigate('/qcm');  // Redirection vers la page du QCM
+                navigate('/qcm');  
             } else {
                 setError("Email ou mot de passe incorrect !");
             }
         } catch (error) {
-            setError(error.message);  // Correction ici pour éviter l'erreur d'affichage
+            setError(error.message); 
         }
     };
 
